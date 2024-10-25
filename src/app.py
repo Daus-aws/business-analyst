@@ -7,7 +7,7 @@ import os
 def extract_excel_columns(file, header_row):
     df = pd.read_excel(file, header=header_row)
     column_types = df.dtypes.reset_index()
-    column_types.columns = ['Column Names', 'Data Type']
+    column_types.columns = ['Column Name', 'Data Type']
     return column_types
 
 # Function to parse SQL file and extract table and column information
